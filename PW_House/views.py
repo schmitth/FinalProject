@@ -70,7 +70,7 @@ def create_view(request):
 @login_required(login_url='login')
 def update_view(request, id):
     source = sourceTable.objects.get(id=id)
-    form = SourceForm(request.POST or None, instace=source)
+    form = SourceForm(request.POST or None, instance=source)
     if form.is_valid():
         form.save()
         return redirect('read')

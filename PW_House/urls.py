@@ -9,6 +9,6 @@ urlpatterns = [
     path('images/', views.images_view, name='images'),
     path('sources/', views.read_view, name='read'),
     path('create/', views.create_view, name='create'),
-    path('update/<int:id>', views.update_view, name='update'),
-    path('delete/<int:id>', views.delete_view, name='delete')
+    path('update/', views.update_view, name='update'),
+    path('delete/', views.delete_view, name='delete')
 ]
