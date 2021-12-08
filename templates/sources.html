@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}
+Sources
+{% endblock %}
+{% block body %}
+<ul>
+{% for source in sources %}
+    <li>{{ source }}
+        <a href="{% url 'update' %}">Update Source </a>
+        <a href="{% url 'delete' %}">Delete Source</a>
+    </li>
+{% endfor %}
+</ul>
+    <a href="{% url 'create' %}">Add Source</a>
+{% endblock %}
